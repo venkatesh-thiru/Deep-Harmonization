@@ -1,6 +1,7 @@
 # Deep-Harmonization
 Code for "Deep Learning-based Harmonization and Super-Resolution of Landsat-8 and Sentinel-2 images" paper.
-![s2l8h](images/comparison2.png)
+
+![s2l8h](images/comparison.png)
 
 ## Table of Content
 * [Abstract](#abstract)
@@ -53,4 +54,4 @@ The models were trained-tested and validated on about 60K Sentinal-2 and Landsat
 
 
 ### Training
-Training configurations are defined in 
+Training configurations are defined in the [config](training/config.py) file.
