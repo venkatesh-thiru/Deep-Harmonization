@@ -6,6 +6,11 @@ Code for "Deep Learning-based Harmonization and Super-Resolution of Landsat-8 an
 ## Table of Content
 * [Abstract](#abstract)
 * [Installation](#installation)
+* [Usage](#usage)
+* [Pretrained models](#pre-trained-models)
+* [Inferencing](#inferencing)
+* [Feedbacks](#feedbacks)
+
 
 ## Abstract
 Multi-spectral satellite images from the Earth’s surface are used in various applications spanning from water quality assessment and urban planning to climate monitoring, disaster response, infrastructure oversight, and agricultural surveillance. 
@@ -56,7 +61,7 @@ The models were trained-tested and validated on about 60K Sentinal-2 and Landsat
 ### Training
 Training configurations are defined in the [config](training/config.py) file.
 
-### Pre-Trained Models
+## Pre-Trained Models
 Model cards for pre-trained UNet architectures are created in 🤗(huggingface) 
 
 UNet-6depth-Up+Conv model - [venkatesh-thiru/s2l8h-UNet-6depth-upsample](https://huggingface.co/venkatesh-thiru/s2l8h-UNet-6depth-upsample)
@@ -71,13 +76,15 @@ from transformers import AutoModel
 model = AutoModel.from_pretrained("venkatesh-thiru/s2l8h-UNet-5depth-upsample", trust_remote_code=True)
 ```
 
-### Inferencing
+## Inferencing
 [inference.ipynb](inference/inference_example.ipynb) contains an example inference from a region outside the train-test-validation regime.
 The data acquisition depends on [odc-stac](https://odc-stac.readthedocs.io/en/latest/) library, which inherently fetches the data from AWS s3 buckets of [landsat STAC catalogue](https://landsatlook.usgs.gov/stac-server). Therefore it is recommended to setup an AWS credential as described [here](https://pypi.org/project/boto3/).
 
 
-### Feedbacks
-We would appreciate users who already use Landsat MSI images in their pipeline, to preprocess their images using our pipeline and then report to us any changes in their KPIs.
-Feel free to raise and issue or report any bugs if you have found any.
+## Feedbacks
+We encourage users who are currently utilizing Landsat MSI images within their existing pipelines to utilize our pipeline for preprocessing those images. 
+Following this, we kindly request users to share any alterations or variations they observe in their Key Performance Indicators (KPIs). 
+If any bugs or issues are encountered during this process, please do not hesitate to raise an issue or report them to us for prompt attention and resolution. 
+Your feedback is highly valuable to us.
 
 You could reach out to us at : venkatesh.thirugnana@ovgu.de
