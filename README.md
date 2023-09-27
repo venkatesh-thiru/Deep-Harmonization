@@ -55,3 +55,29 @@ The models were trained-tested and validated on about 60K Sentinal-2 and Landsat
 
 ### Training
 Training configurations are defined in the [config](training/config.py) file.
+
+### Pre-Trained Models
+Model cards for pre-trained UNet architectures are created in 🤗(huggingface) 
+
+UNet-6depth-Up+Conv model - [venkatesh-thiru/s2l8h-UNet-6depth-upsample](https://huggingface.co/venkatesh-thiru/s2l8h-UNet-6depth-upsample)
+
+UNet-5depth-Up+Conv model - [venkatesh-thiru/s2l8h-UNet-5depth-upsample](https://huggingface.co/venkatesh-thiru/s2l8h-UNet-5depth-upsample)
+
+The pretrained models can be called using
+
+```
+# Load model directly
+from transformers import AutoModel
+model = AutoModel.from_pretrained("venkatesh-thiru/s2l8h-UNet-5depth-upsample", trust_remote_code=True)
+```
+
+### Inferencing
+[inference.ipynb](inference/inference_example.ipynb) contains an example inference from a region outside the train-test-validation regime.
+The data acquisition depends on [odc-stac](https://odc-stac.readthedocs.io/en/latest/) library, which inherently fetches the data from AWS s3 buckets of [landsat STAC catalogue](https://landsatlook.usgs.gov/stac-server). Therefore it is recommended to setup an AWS credential as described [here](https://pypi.org/project/boto3/).
+
+
+### Feedbacks
+We would appreciate users who already use Landsat MSI images in their pipeline, to preprocess their images using our pipeline and then report to us any changes in their KPIs.
+Feel free to raise and issue or report any bugs if you have found any.
+
+You could reach out to us at : venkatesh.thirugnana@ovgu.de
