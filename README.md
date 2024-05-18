@@ -68,6 +68,10 @@ UNet-6depth-Up+Conv model - [venkatesh-thiru/s2l8h-UNet-6depth-upsample](https:/
 
 UNet-5depth-Up+Conv model - [venkatesh-thiru/s2l8h-UNet-5depth-upsample](https://huggingface.co/venkatesh-thiru/s2l8h-UNet-5depth-upsample)
 
+UNet-6depth-shuffle model - [venkatesh-thiru/s2l8h-UNet-6depth-shuffle](https://huggingface.co/venkatesh-thiru/s2l8h-UNet-6depth-shuffle)
+
+UNet-5depth-shuffle model - [venkatesh-thiru/s2l8h-UNet-5depth-shuffle](https://huggingface.co/venkatesh-thiru/s2l8h-UNet-5depth-shuffle)
+
 The pretrained models can be called using
 
 ```
