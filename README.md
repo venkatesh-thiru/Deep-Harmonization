@@ -77,12 +77,14 @@ The pretrained models can be called using
 ```
 # Load model directly
 from transformers import AutoModel
+# UNet-5depth-upsample
 model = AutoModel.from_pretrained("venkatesh-thiru/s2l8h-UNet-5depth-upsample", trust_remote_code=True)
 ```
+Better results can be achieved by ensembling the results from all 4 models mentioned above.
 
 ## Inferencing
 [inference.ipynb](inference/inference_example.ipynb) contains an example inference from a region outside the train-test-validation regime.
-The data acquisition depends on [odc-stac](https://odc-stac.readthedocs.io/en/latest/) library, which inherently fetches the data from AWS s3 buckets of [landsat STAC catalogue](https://landsatlook.usgs.gov/stac-server). Therefore it is recommended to setup an AWS credential as described [here](https://pypi.org/project/boto3/).
+The data acquisition depends on [odc-stac](https://odc-stac.readthedocs.io/en/latest/) library, which inherently fetches the data from AWS s3 buckets of [landsat STAC catalogue](https://landsatlook.usgs.gov/stac-server). Therefore, it is recommended to setup an AWS credential as described [here](https://pypi.org/project/boto3/).
 
 
 ## Feedbacks
