@@ -81,11 +81,10 @@ from transformers import AutoModel
 model = AutoModel.from_pretrained("venkatesh-thiru/s2l8h-UNet-5depth-upsample", trust_remote_code=True)
 l8up = model(l8MS, l8pan)
 ```
-```
 Where
-  l8MS - Landsat Multispectral -- Bottom of the Atmosphere (L2) Reflectances
-  l8pan - Landsat Pan-Chromatic -- Top of the Atmosphere (L1) Reflectances
-```
+ * `l8MS` - Landsat Multispectral -- Bottom of the Atmosphere (L2) Reflectances
+ * `l8pan` - Landsat Pan-Chromatic -- Top of the Atmosphere (L1) Reflectances
+   
 Better results can be achieved by ensembling the results from all 4 models mentioned above.
 
 ## Inferencing
