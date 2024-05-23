@@ -1,5 +1,5 @@
 # Deep-Harmonization
-Code for "Deep Learning-based Harmonization and Super-Resolution of Landsat-8 and Sentinel-2 images" paper.
+Code for "Deep Learning-based Harmonization and Super-Resolution of Landsat-8 and Sentinel-2 images" [paper](https://www.sciencedirect.com/science/article/pii/S0924271624001850).
 
 ![s2l8h](images/comparison.png)
 
@@ -13,7 +13,7 @@ Code for "Deep Learning-based Harmonization and Super-Resolution of Landsat-8 an
 
 
 ## Abstract
-Multi-spectral satellite images from the Earth’s surface are used in various applications spanning from water quality assessment and urban planning to climate monitoring, disaster response, infrastructure oversight, and agricultural surveillance. 
+Multispectral satellite images of the Earth’s surface are used in various applications, ranging from water quality assessment and urban planning to climate monitoring, disaster response, infrastructure oversight, and agricultural surveillance. 
 Many of these applications would benefit from higher spatial and temporal resolution of observations, which could be achieved by
 combining observations from several different sources. 
 In this study, we introduce a deep learning-based pipeline to harmonize the spectral and spatial discrepancies between the Landsat-8 and Sentinel-2 Earth Observation satellites. 
@@ -89,13 +89,28 @@ Better results can be achieved by ensembling the results from all 4 models menti
 
 ## Inferencing
 [inference.ipynb](inference/inference_example.ipynb) contains an example inference from a region outside the train-test-validation regime.
-The data acquisition depends on [odc-stac](https://odc-stac.readthedocs.io/en/latest/) library, which inherently fetches the data from AWS s3 buckets of [landsat STAC catalogue](https://landsatlook.usgs.gov/stac-server). Therefore, it is recommended to setup an AWS credential as described [here](https://pypi.org/project/boto3/).
+The data acquisition depends on the [odc-stac](https://odc-stac.readthedocs.io/en/latest/) library, which inherently fetches the data from AWS s3 buckets of the [landsat STAC catalogue](https://landsatlook.usgs.gov/stac-server). Therefore, it is recommended to set up an AWS credential as described [here](https://pypi.org/project/boto3/).
 
 
 ## Feedbacks
-We encourage users who are currently utilizing Landsat MSI images within their existing pipelines to utilize our pipeline for preprocessing those images. 
-Following this, we kindly request users to share any alterations or variations they observe in their Key Performance Indicators (KPIs). 
+We encourage users currently utilizing Landsat Multi Spectral images within their existing pipelines to use our pipeline for preprocessing those images. 
+Following this, we kindly request users share any alterations or variations observed in their Key Performance Indicators (KPIs). 
 If any bugs or issues are encountered during this process, please do not hesitate to raise an issue or report them to us for prompt attention and resolution. 
 Your feedback is highly valuable to us.
 
 You could reach out to us at : venkatesh.thirugnana@ovgu.de
+
+## Citation Information
+If you use this pipeline, please cite our paper
+
+```
+@article{sambandham2024deep,
+  title={Deep learning-based harmonization and super-resolution of Landsat-8 and Sentinel-2 images},
+  author={Sambandham, Venkatesh Thirugnana and Kirchheim, Konstantin and Ortmeier, Frank and Mukhopadhaya, Sayan},
+  journal={ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume={212},
+  pages={274--288},
+  year={2024},
+  publisher={Elsevier}
+}
+```
