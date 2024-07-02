@@ -83,6 +83,8 @@ l8up = model(l8MS, l8pan)
 ```
 Where
  * `l8MS` - Landsat Multispectral -- Bottom of the Atmosphere (L2) Reflectances
+   * The multi-spectral bands are ordered as follows : ['blue', 'green', 'red', 'nir08', 'swir16', 'swir22']
+      * The band names are same as what we get from the [USGS's STAC server](https://landsatlook.usgs.gov/stac-server) 
  * `l8pan` - Landsat Pan-Chromatic -- Top of the Atmosphere (L1) Reflectances
    
 Better results can be achieved by ensembling the results from all 4 models mentioned above.
