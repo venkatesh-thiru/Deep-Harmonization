@@ -100,7 +100,7 @@ Following this, we kindly request users share any alterations or variations obse
 If any bugs or issues are encountered during this process, please do not hesitate to raise an issue or report them to us for prompt attention and resolution. 
 Your feedback is highly valuable to us.
 
-You could reach out to us at : venkatesh.thirugnana@ovgu.de
+You could reach out to us at : venkateshmech95@outlook.com
 
 ## Citation Information
 If you use this pipeline, please cite our paper
