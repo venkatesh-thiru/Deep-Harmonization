@@ -116,3 +116,6 @@ If you use this pipeline, please cite our paper
   publisher={Elsevier}
 }
 ```
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=venkatesh-thiru/Deep-Harmonization&type=Date)](https://star-history.com/#venkatesh-thiru/Deep-Harmonization&Date)
